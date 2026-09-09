@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://mvp-mercados-viva-backend.onrender.com/";
 
 const token = localStorage.getItem("access_token");
 const usuarioGuardado = localStorage.getItem("usuario");
