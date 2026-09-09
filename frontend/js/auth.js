@@ -1,4 +1,4 @@
-const API_URL = "https://mvp-mercados-viva-backend.onrender.com/";
+const API_URL = "https://mvp-mercados-viva-backend.onrender.com";
 
 
 // ============================================================
