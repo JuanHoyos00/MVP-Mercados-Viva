@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mercado VIVA</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="brand-panel">
+
+            <div class="brand-content">
+
+                <span class="brand-tag">
+                    Mercado VIVA
+                </span>
+
+                <h1>
+                    Inventario conectado.
+                    <br>
+                    Compras más confiables.
+                </h1>
+
+                <p>
+                    Consulta productos, confirma tus compras y mantén
+                    actualizado el inventario desde una misma plataforma.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="auth-panel">
+
+            <div class="auth-container">
+
+                <div class="tabs">
+
+                    <button
+                        id="btn-tab-login"
+                        class="tab active"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                    <button
+                        id="btn-tab-registro"
+                        class="tab"
+                    >
+                        Registrarse
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <form id="form-login" class="auth-form">
+
+                    <div class="form-header">
+
+                        <h2>Bienvenido</h2>
+
+                        <p>
+                            Inicia sesión para continuar.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="login-email">
+                            Correo
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            placeholder="cliente1@gmail.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="login-password">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        Iniciar sesión
+                    </button>
+
+
+                    <div
+                        id="login-message"
+                        class="message"
+                    ></div>
+
+                </form>
+
+
+                <!-- REGISTRO -->
+
+                <form
+                    id="form-registro"
+                    class="auth-form hidden"
+                >
+
+                    <div class="form-header">
+
+                        <h2>Crear cuenta</h2>
+
+                        <p>
+                            El registro público crea una cuenta de cliente.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registro-nombre">
+                            Nombre de usuario
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registro-nombre"
+                            placeholder="cliente1"
+                            minlength="3"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registro-email">
+                            Correo
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registro-email"
+                            placeholder="cliente1@gmail.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registro-password">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registro-password"
+                            placeholder="Mínimo 6 caracteres"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        Crear cuenta
+                    </button>
+
+
+                    <div
+                        id="registro-message"
+                        class="message"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mercado VIVA - Auxiliar</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+        <h1>Mercado VIVA</h1>
+        <p>Gestión de inventario</p>
+    </div>
+
+    <div class="topbar-actions">
+
+        <span id="usuario-nombre"></span>
+
+        <button
+            id="btn-logout"
+            class="btn-secondary"
+        >
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="auxiliar-layout">
+
+    <section class="inventario-section">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Inventario</h2>
+
+                <p>
+                    Consulta y actualiza las existencias disponibles.
+                </p>
+            </div>
+
+            <button
+                id="btn-recargar"
+                class="btn-secondary"
+            >
+                Actualizar lista
+            </button>
+
+        </div>
+
+
+        <div
+            id="inventario-message"
+            class="message"
+        ></div>
+
+
+        <div class="tabla-container">
+
+            <table class="inventario-tabla">
+
+                <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock actual</th>
+                    <th>Nuevo stock</th>
+                    <th>Acción</th>
+                </tr>
+
+                </thead>
+
+                <tbody id="productos-tabla">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/auxiliar.js"></script>
+
+</body>
+</html>

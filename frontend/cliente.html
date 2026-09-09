@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado VIVA - Cliente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div>
+        <h1>Mercado VIVA</h1>
+        <p>Compra digital</p>
+    </div>
+
+    <div class="topbar-actions">
+        <span id="usuario-nombre"></span>
+        <button id="btn-logout" class="btn-secondary">
+            Cerrar sesión
+        </button>
+    </div>
+</header>
+
+<main class="cliente-layout">
+
+    <section class="productos-section">
+
+        <div class="section-header">
+            <div>
+                <h2>Productos disponibles</h2>
+                <p>Consulta el inventario actualizado en tiempo real.</p>
+            </div>
+
+            <button id="btn-recargar" class="btn-secondary">
+                Actualizar
+            </button>
+        </div>
+
+        <div id="productos-container" class="productos-grid">
+        </div>
+
+    </section>
+
+
+    <aside class="carrito-panel">
+
+        <div class="carrito-header">
+            <h2>Tu carrito</h2>
+
+            <span id="carrito-contador" class="contador">
+                0
+            </span>
+        </div>
+
+
+        <div id="carrito-items" class="carrito-items">
+
+            <p class="carrito-vacio">
+                Tu carrito está vacío.
+            </p>
+
+        </div>
+
+
+        <div class="carrito-footer">
+
+            <div class="carrito-total">
+                <span>Total</span>
+                <strong id="carrito-total">$0</strong>
+            </div>
+
+            <button
+                id="btn-confirmar"
+                class="btn-primary"
+                disabled
+            >
+                Confirmar compra
+            </button>
+
+            <div
+                id="compra-message"
+                class="message"
+            ></div>
+
+        </div>
+
+    </aside>
+
+</main>
+
+<script src="js/cliente.js"></script>
+
+</body>
+</html>

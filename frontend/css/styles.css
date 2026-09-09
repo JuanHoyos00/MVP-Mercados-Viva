@@ -1,0 +1,820 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f5;
+    color: #1d2a22;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+}
+
+
+/* ========================================
+   PANEL IZQUIERDO
+======================================== */
+
+.brand-panel {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25, 90, 60, 0.96),
+            rgba(50, 130, 85, 0.9)
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+    color: white;
+}
+
+.brand-content {
+    max-width: 560px;
+}
+
+.brand-tag {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.brand-content h1 {
+    font-size: 52px;
+    line-height: 1.08;
+
+    margin-bottom: 24px;
+}
+
+.brand-content p {
+    max-width: 480px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* ========================================
+   PANEL DERECHO
+======================================== */
+
+.auth-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 36px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   TABS
+======================================== */
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: #eef3f0;
+
+    border-radius: 10px;
+
+    padding: 5px;
+
+    margin-bottom: 32px;
+}
+
+.tab {
+    border: none;
+    background: transparent;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #6a756e;
+    font-weight: 600;
+}
+
+.tab.active {
+    background: white;
+    color: #206b49;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   FORMULARIO
+======================================== */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-header {
+    margin-bottom: 4px;
+}
+
+.form-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #718078;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d8dfdb;
+    border-radius: 9px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2d8c61;
+
+    box-shadow:
+        0 0 0 3px rgba(45, 140, 97, 0.12);
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.btn-primary {
+    border: none;
+
+    background: #236f4d;
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1a593d;
+}
+
+
+/* ========================================
+   MENSAJES
+======================================== */
+
+.message {
+    display: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.message.success {
+    display: block;
+
+    background: #e9f7ef;
+    color: #1e6945;
+
+    border: 1px solid #b9e3c9;
+}
+
+.message.error {
+    display: block;
+
+    background: #fff0f0;
+    color: #a12e2e;
+
+    border: 1px solid #efc1c1;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-panel {
+        min-height: 320px;
+
+        padding: 40px 24px;
+    }
+
+    .brand-content h1 {
+        font-size: 38px;
+    }
+
+    .auth-panel {
+        padding: 30px 20px;
+    }
+}
+/* ========================================
+   TOPBAR
+======================================== */
+
+.topbar {
+    min-height: 80px;
+
+    padding: 16px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e3e8e5;
+}
+
+.topbar h1 {
+    color: #226f4c;
+    font-size: 24px;
+}
+
+.topbar p {
+    color: #77827c;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#usuario-nombre {
+    font-weight: 600;
+    color: #46534b;
+}
+
+
+/* ========================================
+   BOTÓN SECUNDARIO
+======================================== */
+
+.btn-secondary {
+    border: 1px solid #d4ddd8;
+    background: #ffffff;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: #395045;
+
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: #f2f6f4;
+}
+
+
+/* ========================================
+   LAYOUT CLIENTE
+======================================== */
+
+.cliente-layout {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 35px 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 360px;
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   PRODUCTOS
+======================================== */
+
+.productos-section {
+    min-width: 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-size: 26px;
+
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    color: #748078;
+
+    font-size: 14px;
+}
+
+.productos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.producto-card {
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.04);
+}
+
+.producto-card h3 {
+    font-size: 19px;
+}
+
+.producto-precio {
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: #226f4c;
+}
+
+.producto-stock {
+    font-size: 13px;
+}
+
+.stock-disponible {
+    color: #257649;
+
+    font-weight: 600;
+}
+
+.stock-agotado {
+    color: #b04444;
+
+    font-weight: 600;
+}
+
+.producto-card button {
+    margin-top: auto;
+}
+
+
+/* ========================================
+   CARRITO
+======================================== */
+
+.carrito-panel {
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    height: fit-content;
+
+    position: sticky;
+
+    top: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.carrito-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #e7ece9;
+}
+
+.contador {
+    min-width: 28px;
+    height: 28px;
+
+    padding: 0 8px;
+
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7f4ec;
+
+    color: #226f4c;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+.carrito-items {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin: 20px 0;
+}
+
+.carrito-vacio {
+    color: #89938d;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    padding: 30px 10px;
+}
+
+.carrito-item {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 12px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+.carrito-item h4 {
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+.carrito-item p {
+    font-size: 13px;
+
+    color: #737f78;
+}
+
+.item-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.item-controls button {
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #d6ddd9;
+
+    background: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.carrito-footer {
+    border-top: 1px solid #e7ece9;
+
+    padding-top: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.carrito-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.carrito-total strong {
+    font-size: 22px;
+
+    color: #226f4c;
+}
+
+.btn-primary:disabled {
+    background: #aeb8b2;
+
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   RESPONSIVE CLIENTE
+======================================== */
+
+@media (max-width: 950px) {
+
+    .cliente-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 15px 20px;
+    }
+
+    .cliente-layout {
+        padding: 25px 20px;
+    }
+
+    .topbar-actions {
+        gap: 10px;
+    }
+}
+/* ========================================
+   AUXILIAR
+======================================== */
+
+.auxiliar-layout {
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 35px 40px;
+}
+
+.inventario-section {
+    background: #ffffff;
+
+    border: 1px solid #e3e8e5;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   TABLA
+======================================== */
+
+.tabla-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 20px;
+}
+
+.inventario-tabla {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+.inventario-tabla th {
+    text-align: left;
+
+    padding: 14px 16px;
+
+    background: #f3f7f5;
+
+    color: #45534b;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #dce4df;
+}
+
+.inventario-tabla td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #edf1ef;
+
+    vertical-align: middle;
+}
+
+.inventario-tabla tbody tr:hover {
+    background: #fafcfb;
+}
+
+.stock-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 42px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.stock-badge.ok {
+    background: #e7f5ec;
+
+    color: #246c47;
+}
+
+.stock-badge.zero {
+    background: #fdecec;
+
+    color: #a13939;
+}
+
+
+/* ========================================
+   INPUT INVENTARIO
+======================================== */
+
+.stock-input {
+    width: 100px;
+
+    padding: 9px 10px;
+
+    border: 1px solid #d5ddd8;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.stock-input:focus {
+    border-color: #2d8c61;
+
+    box-shadow:
+        0 0 0 3px rgba(45, 140, 97, 0.12);
+}
+
+
+/* ========================================
+   BOTÓN TABLA
+======================================== */
+
+.btn-actualizar-stock {
+    border: none;
+
+    background: #236f4d;
+
+    color: #ffffff;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.btn-actualizar-stock:hover {
+    background: #1a593d;
+}
+
+.btn-actualizar-stock:disabled {
+    background: #aeb8b2;
+
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   RESPONSIVE AUXILIAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    .auxiliar-layout {
+        padding: 25px 18px;
+    }
+
+    .inventario-section {
+        padding: 20px;
+    }
+}
